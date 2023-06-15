@@ -1,0 +1,17 @@
+@import 'src/App.scss';
+
+.simple-button {
+    font-size: 13px;
+    font-family: $mono-font;
+    text-align: center;
+    text-decoration: none;
+    color: $cyan !important;
+    border: 1px solid $cyan;
+    padding: 10px;
+    border-radius: 5px;
+    grid-area: simple-button;
+    transition-duration: 0.3s;
+    &:hover {
+        background-color: rgba(95, 158, 160, 0.24);
+    }
+}

@@ -1,0 +1,130 @@
+@import 'src/App.scss';
+
+.greeting {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    transform: translateY(-70px);
+    
+    .greeting-hello {
+        padding-left: 13px;
+        grid-area: greeting-hello;
+        font-weight: 300;
+        font-family: $mono-font-light;
+        font-weight: normal;
+        font-size: 16px;
+        color: $cyan;
+        margin-bottom: 10px;
+    }
+
+    .greeting-sava {
+        margin-bottom: 15px;
+        grid-area: greeting-sava;
+        text-align: left;
+        font-weight: 300;
+        font-size: 65px;
+        font-family: "Roboto";
+        font-weight: 700;
+        color: $white-blue-1;
+    }
+
+    .greeting-about {
+        margin-bottom: 15px;
+        grid-area: greeting-about;
+        text-align: left;
+        font-weight: 500;
+        font-size: 40px;
+        font-family: "Roboto", sans-serif;
+        color: $white-blue-2;
+    }
+
+    .greeting-description {
+        margin-bottom: 15px;
+        width: 50%;
+        line-height: 23px;
+        justify-self: left;
+        text-align: left;
+        grid-area: greeting-description;
+        font-family: "Roboto", sans-serif;
+        color: $white-blue-3;
+
+    }
+    .greeting-button {
+        width: 180px;
+        display: grid;
+        align-content: center;
+        grid-area: greeting-button;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 1px solid cadetblue;
+        color: cadetblue;
+        text-align: center;
+        justify-self: left;
+        padding: 10px;
+        font-family: "Share Tech Mono", sans-serif;
+        &:hover {
+            transition-duration: 0.2s;
+            background-color: rgba(95, 158, 160, 0.24);
+        }
+    }
+
+    .typing-text {
+        width: 22ch;
+        animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2em;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .greeting {
+        .greeting-hello {
+           padding-left: 10px;
+        }
+        .greeting-sava {
+            font-size: 45px;
+        }
+        .greeting-about {
+            font-size: 30px;
+        }
+        .greeting-description {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .greeting {
+        .greeting-hello {
+           padding-left: 7px;
+        }
+        .greeting-sava {
+            font-size: 35px;
+        }
+        .greeting-about {
+            font-size: 25px;
+        }
+        .greeting-description {
+            width: 100%;
+        }
+       
+    }
+}

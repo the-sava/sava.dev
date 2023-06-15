@@ -1,0 +1,67 @@
+@import 'src/App.scss';
+
+.work {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "work__post work__post"
+                         "work__date work__date"
+                         "work__description work__description";
+    .work__post {
+        grid-area: work__post;
+        color: $white-blue-1;
+        font-weight: bold;
+        font-family: "Roboto", sans-serf;
+        font-size: 18px;
+    }
+    .work__company {
+        margin-left: 10px;
+        text-decoration: none;
+        grid-area: work__company;
+        font-size: 18px;
+        font-family: "Roboto", sans-serf;
+        color: $cyan;
+    }
+    .work__date {
+        margin-top: 10px;
+        grid-area: work__date;
+        font-size: 14px;
+        font-family: $mono-font-light;
+        color: $white-blue-2;
+    }
+    .work__description {
+        margin-top: 15px;
+        grid-area: work__description;
+        font-family: $mono-font-light;
+        color: $white-blue-2;
+        li {
+            margin-bottom: 20px;
+            &::before {
+                margin-right: 5px;
+                content: "▹";
+                color: $cyan;
+            }
+        }   
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .work {
+        .work__company {
+            margin-left: 0;
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+        }
+        .work__date {
+    
+            font-size: 14px;
+            
+        }
+        .work__description {
+            li {
+                margin-bottom: 20px;
+            }   
+        }
+    }
+}

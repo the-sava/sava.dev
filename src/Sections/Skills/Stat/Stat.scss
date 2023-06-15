@@ -1,0 +1,91 @@
+@import 'src/App.scss';
+
+.stat {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-areas: "stat-title stat__bar";
+    margin-bottom: 10px;
+    .stat__title {
+        border-radius:  3px 0 0 3px;
+        text-align: center;
+        font-family: $mono-font-light;
+        padding: 8px;
+        font-size: 13px;
+        grid-area: stat-title;
+        background-color: $blue-3;
+    }
+    .stat__bar {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        grid-area: stat__bar;
+        border-radius: 0 3px 3px 0;
+        text-align: right;
+        border-radius: 0 3px 3px 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-size: 13px;
+        color: $blue-3;
+       background-color: $white-blue-3;
+        .stat__procent {
+            height: 100%;
+            z-index: 100;
+            background-color: $dark-cyan;
+            border-radius: 0 3px 3px 0;
+        }
+        .stat__digit {
+            top: 3px;
+            right: 0;
+            position: absolute;
+            padding: 5px;
+            z-index: -1;
+            font-family: $mono-font-light;
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .stat {
+        grid-template-columns: 100px 250px;
+        .stat__bar {
+            .stat__digit {
+                top: 3px;
+                right: 1px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .stat {
+        .stat__bar {
+            .stat__digit {
+                top: 3px;
+                right: 1px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .stat {
+        grid-template-columns: 100px 180px;
+        .stat__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .stat__bar {
+            .stat__digit {
+                top: 1px;
+                right: 2px;
+                font-size: 12px;
+            }
+        }
+        
+    }
+}

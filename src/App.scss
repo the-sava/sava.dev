@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// sizes
+$tablet: 700px;
+$phone: 500px;
+
+// colors
+$blue-1: #0A192F;
+$blue-2: #0A1A30;
+$blue-3: #112240;
+
+$cyan: #64FFDB;
+$dark-cyan: #55d6b8;
+
+$white-blue-1: #CCD6F6;
+$white-blue-2: #8892B0;
+$white-blue-3: #A8B2D1;
+
+$mono-font: "SF Mono Regular", monospaced;
+$mono-font-light: "SF Mono Light", monospaced;
+$base-font-regular: "Source Sans Pro", sans-serif;
+
+
+body {
+  counter-reset: item;
+  position: relative;
+  background-color: $blue-1;
+}
+
+.modal {
+  margin: 0; height: 100%; overflow: hidden
+}
+
+.content {
+  display: flexbox;
+  justify-content: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1300px) {
+  .content {
+    margin: 0 auto;
+    padding: 15px;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    margin: 0;
+    padding: 15px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    margin: 0;
+    width: 100%;
+  }
+}

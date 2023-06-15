@@ -1,0 +1,130 @@
+@import 'src/App.scss';
+
+button {
+	z-index: 100;
+}
+
+// .burger {
+//     z-index: 100000000;
+//     display: block;
+//     width: 50px;
+//     height: 50px;
+//     position: relative;
+//     span {
+//         width: 30px;
+//         height: 2px;
+//         display: block;
+//         background-color: $cyan;
+//         position: absolute;
+//         top: 50%;
+//         right: 0;
+//         border-radius: 4px;
+//         transition-duration: 0.3s;
+//         &:before, &:after {
+//             display: block;
+//             position: absolute;
+//             border-radius: 20px;
+//             content: '';
+//             height: 2px;
+//             background-color: $cyan;
+//         }
+//         &:before {
+//             width: 36px;
+//             transform: translateX(-6px) translateY(-8px);
+//         }
+//         &:after {
+//             width: 24px;
+//             transform: translateX(6px) translateY(8px);
+//         }
+//     }
+// }
+// .active-burger {
+//     justify-self: right;
+//     grid-area: burger;
+//     z-index: 100000000;
+//     display: block;
+//     width: 50px;
+//     height: 50px;
+//     position: relative;
+//     transition: 0.3s;
+//     span {
+//         width: 30px;
+//         height: 2px;
+//         display: block;
+//         background-color: $cyan;
+//         position: absolute;
+//         top: 50%;
+//         right: 0;
+//         border-radius: 4px;
+//         &:before, &:after {
+//             display: block;
+//             position: absolute;
+//             border-radius: 20px;
+//             content: '';
+//             height: 2px;
+//             background-color: $cyan;
+//         }
+//         &:before {
+//             width: 36px;
+//             transform: translateX(-6px) translateY(0px);
+//         }
+//         &:after {
+//             width: 24px;
+//             transform: translateX(6px) translateY(0px);
+//         }
+//     }
+// }
+
+
+.burger {
+    width: 60px;
+    height: 45px;
+	position: relative;
+	transition-duration: 1s;
+	margin: 48px auto 12px auto;
+	cursor: pointer;
+}
+.burger span {
+	height: 9px;
+	width: 60px;
+	background-color: #337AB7;
+	border-radius: 20px;
+	position: absolute;
+	transition-duration: .25s;
+}
+.burger span:before {
+	left: 0;
+	position: absolute;
+	top: -18px;
+	height: 9px;
+	width: 60px;
+	background-color: #337AB7;
+	content: "";
+	border-radius: 20px;
+	transition-duration: .25s;
+}
+.burger span:after {
+	left: 0;
+	position: absolute;
+	top: 18px;
+	height: 9px;
+	width: 60px;
+	background-color: #337AB7;
+	content: "";
+	border-radius: 20px;
+	transition-duration: .25s;
+}
+.burger.open span {
+	background: transparent;
+}
+.burger.open span:before {
+	transition: transform .25s;
+	transform: rotateZ(45deg);
+	top: 0;
+}
+.burger.open span:after {
+	transition: transform .25s;
+	transform: rotateZ(-405deg);
+	top: 0;
+}
+

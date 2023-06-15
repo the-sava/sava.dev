@@ -1,0 +1,37 @@
+@import 'src/App.scss';
+
+.footer {
+    margin-top: 150px;
+    text-align: center;
+    padding-bottom: 20px;
+    .footer__sava {
+        display: block;
+        text-align: center;
+        display: grid;
+        text-decoration: none;
+        font-family: $mono-font-light;
+        font-size: 13px;
+        color: $white-blue-2;
+        transition-duration: 0.3s;
+        &:hover {
+            color: $cyan;
+        }
+        margin-bottom: 7px;
+    }
+    .footer__version {
+        text-decoration: none;
+        font-family: $mono-font-light;
+        font-size: 13px;
+        color: $white-blue-2;
+        transition-duration: 0.3s;
+        &:hover {
+            color: $cyan;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        padding-bottom: 5px;
+    }
+}

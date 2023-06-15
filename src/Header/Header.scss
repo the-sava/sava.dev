@@ -1,0 +1,46 @@
+@import 'src/App.scss';
+.header {
+    color: $white-blue-1;
+    box-sizing: border-box;
+    .header__logo {
+        font-family: "Roboto", sans-serif;
+        display: grid;
+        font-weight: 300;
+        flex-basis: 50px;
+        flex-shrink: 0;
+        padding: 8px;
+        text-align: center;
+        border-radius: 100%;
+        border: 1px solid $cyan;
+        font-size: 50px;
+        text-decoration: none;
+        grid-area: header__logo;
+        color: $cyan;
+    }
+
+    &.header_desktop {
+       padding: 10px 15px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       .simple-button {
+        width: 70px;
+       }
+    }
+
+    &.header_tablet {
+        align-items: center;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+     }
+
+
+    &.header_mobile {
+        width: 100%;
+        align-items: center;
+        padding: 15px 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

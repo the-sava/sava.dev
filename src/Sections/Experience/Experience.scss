@@ -1,0 +1,52 @@
+@import 'src/App.scss';
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .experience__status-bar {
+        background-color: $blue-3;
+        width: 2px;
+        height: 40px;
+        border-radius: 3px;
+        .experience__slider {
+            background-color: $cyan;
+            width: 2px;
+            height: 40px;
+            border-radius: 3px;
+        }
+    }
+    .experience__titles {
+        margin-right: 20px;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 5px 25px;
+            font-family: "Roboto", sans-serif;
+            color: $white-blue-3;
+            font-weight: 300;
+            font-size: 16px;
+            height: 30px;
+            transition-duration: 0.3s;
+            width: 80px;
+            &:hover {
+                color: $cyan;
+                background-color: #112240;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {  
+    .experience {
+        .experience__titles {
+            margin-right: 10px;
+            li {
+                padding: 5px 15px;
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                width: 60px;
+            }
+        }
+    }
+}

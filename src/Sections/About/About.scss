@@ -1,0 +1,44 @@
+@import 'src/App.scss';
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .about__text {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5;
+        color: $white-blue-2;
+        flex-basis: 1;
+        width: 70%;
+        margin-right: 7%;
+    }
+    .about__image {
+        width: 200px;
+        height: 200px;
+        border: 1px solid $cyan;
+        border-radius: 3px;
+        position: relative;
+        .img {
+            border-radius: 3px;
+            transition-duration: 0.3s;
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: $cyan;
+            
+        }
+       
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about {
+        box-sizing: border-box;
+        flex-direction: column;
+        .about__text {
+            margin-right: 0;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+    }
+}
