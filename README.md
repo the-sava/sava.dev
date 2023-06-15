@@ -2,4 +2,4 @@
 Портфолио веб-разработчика
 
 ## Технологии
-Frontend: HTMLL, SCSS, React, Redux
+Frontend: HTML, SCSS, React, Redux
